@@ -14,13 +14,13 @@ begin
 	var nMatches := oRegEx.Matches(strLine).Count;
 	var bRightString := (nStrLen <= nMaxOctalLen) and (nStrLen = nMatches);
 	if not bRightString then
-  begin
+    begin
 		Console.WriteLine('Wrong octal number format!!!');
 		Console.Read();
 		exit();
 	end;
 	for var i : integer := 1 to nStrLen do
-  begin
+    begin
 		var nOctDight : integer := ord(strLine[nStrLen + 1 - i]) - ord('0');
 		nDecNum += (nOctDight * nOctPower);
 		nOctPower *= 8;
