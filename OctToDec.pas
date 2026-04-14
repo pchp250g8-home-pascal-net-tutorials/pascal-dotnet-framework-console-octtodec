@@ -4,9 +4,9 @@
 const
   MAX_INT = Cardinal.MaxValue;
 begin
-  var nDecNum := 0;
-	var nOctPower := 1;
-	var nMaxOctalLen := Math.Truncate(Math.Log(MAX_INT, 8));
+  var nDecNum := 0L;
+	var nOctPower := 1L;
+	var nMaxOctalLen := Math.Ceiling(Math.Log(MAX_INT, 8));
 	var oRegEx := new Regex('[0-7]');
 	Console.WriteLine('Input an octal number');
 	var strLine := Console.ReadLine();
